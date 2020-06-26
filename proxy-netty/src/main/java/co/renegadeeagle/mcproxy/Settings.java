@@ -9,7 +9,14 @@ public class Settings {
     private String motd;
     private short port;
     private List<Node> nodes;
+    private String host;
 
+    public String getHost() {
+    	return host;
+    }
+    public void setHost(String h) {
+    	host = h;
+    }
     public String getVersionName() {
         return versionName;
     }

@@ -36,7 +36,7 @@ public class Main {
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
 
-            ChannelFuture f = b.bind(settings.getPort()).sync();
+            ChannelFuture f = b.bind(settings.getHost(),settings.getPort()).sync();
 
             f.channel().closeFuture().sync();
         } catch (InterruptedException e) {
@@ -68,6 +68,7 @@ public class Main {
             Gson gson = new GsonBuilder().setPrettyPrinting().create();
             Settings defaultSettings = new Settings();
             defaultSettings.setVersionName("ProxyCup");
+            defaultSettings.setHost("0.0.0.0");
             defaultSettings.setMaxPlayers(1337);
             defaultSettings.setOnlinePlayers(133);
             defaultSettings.setMotd("Couldnt connect to requested backend server. If you believe this to be an issue, contact the administrator of this proxy.");
