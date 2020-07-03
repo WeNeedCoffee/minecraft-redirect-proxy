@@ -13,10 +13,11 @@ Run the jar and edit config.json accordingly.
 ```
 {
   "versionName": "ProxyCup",
-  "maxPlayers": 1337,
-  "onlinePlayers": 133,
+  "maxPlayers": 666,
+  "onlinePlayers": 666,
   "motd": "Couldnt connect to requested backend server. If you believe this to be an issue, contact the administrator of this proxy.",
-  "port": 22000,
+  "port": 25565,
+  "host": "0.0.0.0",
   "nodes": [
     {
       "hostname": "localhost",
@@ -34,6 +35,7 @@ Run the jar and edit config.json accordingly.
 
 | Option        | Info         | Type  |
 | ------------- |:-------------:| -----:|
+| host | The ip to bind to, change to the ip of your shared host if used | String |
 | versionName     | The custom version name if connecting to backend server fails | String |
 | maxPlayers     | Max players if connecting to backend server fails.      |  Integer |
 | onlinePlayers | Online players if connecting to backend server fails.          |    Integer |
